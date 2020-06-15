@@ -1,0 +1,26 @@
+body{
+  margin: 0em;
+}
+h1{
+  font-family: fantasy;
+  font-size: 3em;
+  border-bottom: 1px pink solid;
+  border-right: 1px pink solid;
+  width: 400px;
+  text-align: center;
+}
+.images{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+img{
+  height: 300px;
+  width: 450px;
+  margin: 10px;
+  transition: all 2ms;  
+}
+img:hover{
+transform: scale(1.5);
+}
