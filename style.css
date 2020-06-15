@@ -9,7 +9,7 @@ h1{
   width: 400px;
   text-align: center;
 }
-.images{
+.container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
