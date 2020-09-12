@@ -19,9 +19,17 @@
 <li>a component has to always render something</li>
 <li>when building a component the name will always be capital - as the classes name
   <p>inside the component class - always - render(){return (....)}</p>
-  <p>the component needs to be exported (using "default - only if exports 1 thing") from the definition fileand imported in the index file </p>
+  <p>the component needs to be exported (using "default - only if exports 1 thing") from the definition file and imported in the index file </p>
+  <p>if the file exports more that one element , no default & in the importer file we need to destructure it: import {robots, turtles} from ./'fileName'</p>
 </li>
 <li>JSX - it allows you to write the html syntax inside the js files - is what react uses to create the components - Any line that start with the "<" character starts a JSX block.</li>
 <li>tachyons - like bootstrap for react - by using the classNames provided it allows to add style easier to jsx</li>
 <li>in the index you can define properties for the component <p><Hello greeting = {"Hello " + "React Ninja"}/></p>to be used in the component file definition <p>{this.props.greeting}</p></li>
+<li>In the component you need to return only 1 thing - 1 div, 1 array <p>and is the same in the index, ReactDOM.renders only 1 element, so you better wrap your multiple components in a div ;)  </p></li>
+<li>One thing you will notice with React is that because we always have to return just one element from a component, we end up wrapping a lot of our components in divs.
+
+  BUT WHAT ABOUT SEMANTIC HTML YOU TAUGHT US ABOUT IN THE HTML SECTION ANDREI!??!!
+  
+  You are right! React realized this was an issue, and with the newer version of React 16.2, they introduced something called Fragment to fix this issue. <a href="https://blog.logrocket.com/rendering-sibling-elements-react-fragments/">You can read about it here</a></li>
+
 </ul>
