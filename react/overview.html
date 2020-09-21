@@ -3,44 +3,52 @@
 <h3>Think of React like at a bread machine - trow the ingredients and the machine is taking care of the end result</h3>
 <ul>
   <li>React is made up of components (lego blocks to be combined)- atoms -> molecules -> organisms -> templates -> pages</li>
-<br>
-<img src="images/react_components.jpg" alt="">
-<li>Each component is independent and it has its own functionality - it reduces dependencies -can be used anywhere in the app </li>
-<li>One way data flow - if a component is changing only its children know about it and change accordingly, not the parents </li>
-<li><p>Virtual DOM - as a dev we know that we need to reduce the DOM manipulation as the JS Engine (V8in chrome) slows the performance and is difficult to organize it - creates bugs</p>
-<p>React Bot will take care of the DOM manipulation as it will create a Virtual DOM and it will paint the canvas in the most efficient way </p></li>
-<img src="" alt="">
-<li> <p>in order to update a package - you just need to go in the package.json file (where all the packages and their versions are) and manually update it to the latest version</p>
-<p>2- run npm install - and all the packages will be installed </p>
-<p>npx - npm package installer - <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b"></a> </p>
-<h3>make sure the update doesn't break the app - in large projects there is a person that takes care of this updates </h3> </li>
-<li>React allows us to use different css files for each component</li>
-<li>React has webpack underneath the hood and does the bundling for us - which means we can use "import"(./ - used if the files are in the same directory) to use other files</li>
-<li>a component has to always render something</li>
-<li>when building a component the name will always be capital - as the classes name
+  <br>
+  <img src="images/react_components.jpg" alt="">
+  <li>Each component is independent and it has its own functionality - it reduces dependencies -can be used anywhere in the app </li>
+  <li>One way data flow - if a component is changing only its children know about it and change accordingly, not the parents </li>
+  <li><p>Virtual DOM - as a dev we know that we need to reduce the DOM manipulation as the JS Engine (V8in chrome) slows the performance and is difficult to organize it - creates bugs</p>
+  <p>React Bot will take care of the DOM manipulation as it will create a Virtual DOM and it will paint the canvas in the most efficient way </p></li>
+  <img src="" alt="">
+  <li> <p>in order to update a package - you just need to go in the package.json file (where all the packages and their versions are) and manually update it to the latest version</p>
+  <p>2- run npm install - and all the packages will be installed </p>
+  <p>npx - npm package installer - <a href="https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b"></a> </p>
+  <h3>make sure the update doesn't break the app - in large projects there is a person that takes care of this updates </h3> </li>
+  <li>React allows us to use different css files for each component</li>
+  <li>React has webpack underneath the hood and does the bundling for us - which means we can use "import"(./ - used if the files are in the same directory) to use other files</li>
+  <li>a component has to always render something</li>
+  <li>when building a component the name will always be capital - as the classes name
   <p>inside the component class - always - render(){return (....)}</p>
   <p>the component needs to be exported (using "default - only if exports 1 thing") from the definition file and imported in the index file </p>
   <p>if the file exports more that one element , no default & in the importer file we need to destructure it: import {robots, turtles} from ./'fileName'</p>
 </li>
-<li>JSX - it allows you to write the html syntax inside the js files - is what react uses to create the components - Any line that start with the "<" character starts a JSX block.</li>
-<li>tachyons - like bootstrap for react - by using the classNames provided it allows to add style easier to jsx</li>
-<li>in the index you can define properties for the component <p><Hello greeting = {"Hello " + "React Ninja"}/></p>to be used in the component file definition <p>{this.props.greeting}</p></li>
-<img src="images/react-data-flow.jpg" alt="">
-<li>the props are the properties we keep passing down</li>
-<li>STATE is the description of your app - and is definitely able to change - it usually leaves in the parent component </li>
-<p>Props are simply things that come out of "state"
+  <li>JSX - it allows you to write the html syntax inside the js files - is what react uses to create the components - Any line that start with the "<" character starts a JSX block.</li>
+  <li>tachyons - like bootstrap for react - by using the classNames provided it allows to add style easier to jsx</li>
+  <li>in the index you can define properties for the component <p><Hello greeting = {"Hello " + "React Ninja"}/></p>to be used in the component file definition <p>{this.props.greeting}</p></li>
+  <img src="images/react-data-flow.jpg" alt="">
+  <li>the props are the properties we keep passing down</li>
+  <li>STATE is the description of your app - and is definitely able to change - it usually leaves in the parent component </li>
+  <p>Props are simply things that come out of "state"
 
   So a parent feeds "state" into a child component and as soon as a child (components) component receives a
   
   "state" it's a property. That child can never change that property. The parent just tells it what the "state"
   
   is and the child receives it </p>
-<li>In the component you need to return only 1 thing - 1 div, 1 array <p>and is the same in the index, ReactDOM.renders only 1 element, so you better wrap your multiple components in a div ;)  </p></li>
-<li>One thing you will notice with React is that because we always have to return just one element from a component, we end up wrapping a lot of our components in divs.
+  <p>the components that have a state are called smart components - and tend to have the class sintax</p>
+  <li>In the component you need to return only 1 thing - 1 div, 1 array <p>and is the same in the index, ReactDOM.renders only 1 element, so you better wrap your multiple components in a div ;)  </p></li>
+  <li>One thing you will notice with React is that because we always have to return just one element from a component, we end up wrapping a lot of our components in divs.
 
   BUT WHAT ABOUT SEMANTIC HTML YOU TAUGHT US ABOUT IN THE HTML SECTION ANDREI!??!!
   
   You are right! React realized this was an issue, and with the newer version of React 16.2, they introduced something called Fragment to fix this issue. <a href="https://blog.logrocket.com/rendering-sibling-elements-react-fragments/">You can read about it here</a></li>
 
   <li>when we want to iterate in react we need to give a key to the element that is returned from the loop, so the DOM can keep track of the resulted elements and be able to identify it when we want to delete one them, for example </li>
+  <li>life cycle hooks - react build in functions that run in a specific order without being called - if are included in a component will run in a pre build order 
+    <p><a href="https://reactjs.org/docs/react-component.html">Check the react documentation</a></p>
+  </li>
+  <li>.fetch is a method of the window object and is a used to make request to the servers </li>
+  <li>each element in react has a build in method called .child()
+    <p>is useful to create a functionality around an element, by making it a child and adding "custom tags around it" - see 'scroll' tags and component in robofriends  </p>
+  </li>
 </ul>
