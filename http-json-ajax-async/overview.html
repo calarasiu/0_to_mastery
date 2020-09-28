@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>HTTP/HTTPS</h1>
+  <p>hyper text transfer protocol - a common language between the servers and the browsers(client)</p>
+  <ul>
+    <li>GET you send the request and the server respond with the html you asked for - ask for the Tweeter feed</li>
+    <li>POST - you send data to public to the server - create a new user on Twitter
+      <ol>
+        <li>using query strings parameters - method get ? </li>
+        <li>in the body of the http request - post method using a form </li>
+      </ol>
+    </li>
+    <li>PUT - you ask to update data that is already present in the server  - update your user info</li>
+    <li>DELETE - delete a piece of data from the server - delete the post you added yesterday</li>
+  </ul>
+  <p>The server will reply with 2 main things</p>
+  <ol>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">http messages (inspect the page and open the network tab to see it)</a></li>
+    <li>the html document </li>
+  </ol>
+
+  <p>The data we are sending to the server needs to be of type string - here is where the json becomes useful</p>
+  <h1>JSON - javascript object notation</h1>
+  <p>is a syntax for storing and exchanging data - used to send data between machines  </p>
+  <p>JSON is just data organized in a javascript object (the components still needs to be wrapped between ""),that makes it more efficient - can be read by all the languages </p>
+  <p>Json comes with its own methods - </p>
+  <ol>
+    <li>JSON.parse - transforms the json object in a js object<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">see more </a></li>
+    <li>JSON.stringify(obj) - transforms the object in a json object ready to be sent over to the server</li>
+  </ol>
+
+  <h1>AJAX </h1>
+  <P>Originally, the only way to submit some form data to a server was through the form> tag in HTML. As we have learned, it can do a POST or a GET request. With JSON you can now grab the contents of the input> in a form and submit those with JSON instead of as a form data. You can now submit to the server whenever you want without it necessarily being a form>, through AJAX.. What is AJAX you might say?</P>
+  <P>Ajax is just a way of interacting with the server without reloading the whole page, but just the piece we need - the navbar of Google, for ex, will remain still while changing the search query </P>
+  <p>it uses the fetch method to get data from the given wev api (fetch(http.websiteadress.com))->the response is a promise upon which to call .json method(.then(response=>response.json())) -> .then(data=>console.log(data)) </p>
+  <p>Ajax is a combination of tools that uses JSON, HTTP requests and fetch</p>
+
+  <h1>Promises</h1>
+  <img src="promises.jpg" alt="">
+  <p>promises allow you to catch the errors and display them if the error happens before the catch method</p>
+
+</body>
+</html>
