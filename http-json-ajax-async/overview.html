@@ -37,12 +37,37 @@
   <h1>AJAX </h1>
   <P>Originally, the only way to submit some form data to a server was through the form> tag in HTML. As we have learned, it can do a POST or a GET request. With JSON you can now grab the contents of the input> in a form and submit those with JSON instead of as a form data. You can now submit to the server whenever you want without it necessarily being a form>, through AJAX.. What is AJAX you might say?</P>
   <P>Ajax is just a way of interacting with the server without reloading the whole page, but just the piece we need - the navbar of Google, for ex, will remain still while changing the search query </P>
-  <p>it uses the fetch method to get data from the given wev api (fetch(http.websiteadress.com))->the response is a promise upon which to call .json method(.then(response=>response.json())) -> .then(data=>console.log(data)) </p>
+  <p>it uses the fetch method to get data from the given web api (fetch(http.websiteadress.com))->the response is a promise upon which to call .json method(.then(response=>response.json())) -> .then(data=>console.log(data)) </p>
   <p>Ajax is a combination of tools that uses JSON, HTTP requests and fetch</p>
 
   <h1>Promises</h1>
+  <p>are used for the request that take time and like an "I owe you a result"- a request to a db or to an API - useful bc js is a single stack and it would keep on hold the program otherwise</p>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises">Using Promises</a>
   <img src="promises.jpg" alt="">
+  <p>are the result of the fetch method</p>
   <p>promises allow you to catch the errors and display them if the error happens before the catch method</p>
+  <p>Promise.all([promise1, promise2]).then(values=>{console.log(values)} - it's looping through the returned values of the promises that receives as parameters </p>
+  <h3>A promise is an object that may produce a single value some time in the future - either a resolved value or rejected (with the reason of rejection - catch)</h3>
+  <img src="promise_all.jpg" alt="">
+  <p>A promise can be in one of the 3 possible states </p>
+  <ol>
+    <li>fulfilled/ resolved</li>
+    <li>rejected</li>
+    <li>pending</li>
+  </ol>
+
+  <h1>Async await functions(part of ES8) - are build on top of promises but are easier to read(syntactic sugar) -> the return value is a promise </h1>
+  <a href="https://javascript.info/async-await">async await explained</a>
+  <p>await can be used only inside async function</p>
+  <p>ES6 - destructuring?</p>
+  <img src="asyncVsPromises.jpg" alt="">
+  <h1>Object spread operator(...rest)</h1>
+  <p>it allows us to type only the first few elements of an object/ array and then for the rest -> ...rest </p>
+  <h1>Finally </h1>
+  <p>(.finally(()=>console.log('extra'))) -> it can be called upon a Promise and it will run after the execution of the promise wether it resolves ot trows an error</p>
+  <h1>For await of </h1>
+  <p>it allows us to iterate over the promises resulted from the fetch method</p>
+  <a href="https://github.com/daumann/ECMAScript-new-features-list">ECMAScript new features list</a>
 
 </body>
 </html>
