@@ -1,29 +1,40 @@
 import express from 'express';
 
+
 const app = express();
-/*app.use((req, res, next)=>{
-  console.log(<h1>hello</h1>)
-  // it doesn't go on until it sees the next method
-  next();
-})*/
 
-app.get('/profile', (req, res) =>{
+app.use('/static', express.static('public')); //used to load the html file from the public folder
+
+app.use(express.urlencoded({extended: false})); // this is just for the form 
+app.use(express.json()) //this is for json
+
+
+/*app.get('/profile', (req, res) =>{
+  // req.query
+  // req.body
+  // req.header
+  // req.params
   res.send("profile url");
-});
+});*/
 
-app.get('/', (req, res) =>{
+app.get('/id',(req, res)=>{
+  console.log(req.params)
+  res.status(404).send("not found");
+})
+
+app.get('/json', (req, res) =>{
   const user = {
     name: 'Sally',
     hobby: 'snowboard'
   }
   res.send(user);
 });
+
+app.post('/profile', (req, res)=>{
+  console.log(req.body)
+  res.send('success');
+});
+
 app.listen(3000);
 
 
-/* app.use(bodyparser.urlencoded({extended: false}));
-app.use(bodyparser.json());
-If you are using Express 4.16+ you can now replace that with:
-
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());*/

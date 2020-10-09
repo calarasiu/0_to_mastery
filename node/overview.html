@@ -19,6 +19,22 @@
     <li><a href="https://2019.stateofjs.com/back-end/">the state of js</a></li>
     <li><a href="https://expressjs.com/en/starter/installing.html">check express doc</a></li>
     <li>middleware in express -</li>
+    <li>body-parser package will allow us to use the post method - it is included in express after the 4.15 version- no need to install it as a different package </li>
+    <li>when we create a server with a form that will be submited apart from the body parser package we also need to use the form urlencoded body type from postman </li>
+    <li>for json we need to use the raw body type and then choose the format from the kind of format from the dropdown menu</li>
   </ul>    
+
+  <h2>RESTful Api</h2>
+  <p>A REST API defines a set of functions which developers can perform requests and receive responses via a HTTP protocol such as GET, POST, PUT, DELETE – something we've talked about.Remember how I said a web browser sends a request and just hopes that the server returns what the browser asked for.</p>
+   <p> A Google server can send us whatever it wants. It doesn't have to follow the rules that perhaps the web browser sets. With RESTful API , instead we're able to create an API that is RESTful – something that follows the rules that everybody can agree on so that we have compatibility between different systems.</p>
+    <p> So a RESTful API is an architectural style and it's an approach to communications; an agreed upon set of rules so everyone plays nicely.</p>
+    <p> A RESTful API users GET to receive a resource, PUT to change the state or update a resource, a POST that creates a resource, and a DELETE to remove it. And that's something that we've already talked about, and the RESTful API is a way to define our server so that it specifies what it can provide and how to use it.
+    In other words the URL parameters should make sense.</p>
+    <p> For example if we're doing '/profile' – well, we expect that if it's a GET request we're going to get a profile. If it's a POST request we're going to add a profile. If it's a PUT perhaps we're updating the profile, and this URL makes sense.</p>
+    <p>And you can think of this as the noun of what we want to receive. The HTTP request is the verb and everything after the slash [/] is the noun. </p>
+    <p>Now finally REST APis are something called 'stateless' – meaning that calls can be made independently of one another and each call contains all the data necessary to complete itself successfully. A server doesn't need to keep memorizing things. Each request that comes in has enough information that the server can respond with, regardless of who that person is.</p>
+
+    <h3>static api</h3>
+    <a href="https://expressjs.com/en/starter/static-files.html">see more</a>
 </body>
 </html>
