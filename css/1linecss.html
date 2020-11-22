@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="1linecss.css">
+  <title>Modern layouts</title>
+</head>
+<body>
+  <a href="http://1linelayouts.glitch.me/">Reference</a>
+  <!--Place items center-->
+  <h3>Place items center</h3>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/place-items">Documentation</a>
+  <div class="parentBlue">
+    <div class="boxCoral" contenteditable>
+      <p>:)</p>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <!--The deconstructed pancake-->
+  <h3>The deconstructed pancake - flex: 0 1 baseWidth- check the mobile version to see the result</h3>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">flex docs</a>
+  <div class="parentWhite">
+    <div class="box-green">1</div>
+    <div class="box-green">2</div>
+    <div class="box-green">3</div>
+  </div>
+
+  <!--Sidebar-->
+  <h3 style="margin-top: 50px;">Sidebar</h3>
+  <h4>grid-template-columns: minmax(150px, 25%) 1fr</h4>
+  <div class="parendSidebar">
+    <div class="sectionYellow">
+      <p>Min: 150px / Max: 25%</p>
+    </div>
+    <div class="purpleSection">
+      <p>This section takes the second part of the grid position (1fr), meaning the rest of the remaining space</p>
+    </div>
+  </div>
+
+  <!--The pancake stack-->
+  <h3 style="margin-top: 50px;">The pancake stack</h3>
+  <h4>grid-template-rows: auto 1fr auto;</h4>
+  <div class="pancakeStack">
+    <header class="blueSection" contenteditable>Header - will take as much space as needed</header>
+    <main class="sectionYellow" contenteditable>Main - the rest of the remaining space</main>
+    <footer class="purpleSection" contenteditable>Footer - will take as much space as needed</footer>
+  </div>
+  
+  <!--Classic holly grail Layout-->
+  <h3 style="margin-top: 50px;">Classic holly grail Layout</h3>
+  <h4>grid-template: auto 1fr auto (columns)/ auto 1fr auto(rows)</h4>
+  <div class="holyGrail">
+    <header class="pinkSection header">Header</header>
+    <div class="sectionYellow mainLeft">Left Sidebar</div>
+    <div class="purpleSection main">Main Content</div>
+    <div class="blueSection mainRight">Right Sidebar</div>
+    <footer class="footer greenSection">Footer</footer>
+  </div>
+
+
+  <!--Span Grid-->
+  <h3>Span grid</h3>
+  <h4>grid-template-columns: repeat(12, 1fr)  </h4>
+  <p>.span-12 { <hr>
+    grid-column: 1 / span 12; <hr>
+  }</p>
+  <div class="spanGrid white">
+    <div class="col span-12 greenSection">Span 12</div>
+    <div class="col span-6 pinkSection">Span 6</div>
+    <div class="col span-4 sectionYellow">Span 4</div>
+    <div class="col span-2 purpleSection">Span 2</div>
+  </div>
+
+
+  <!--RAM (Repeat, Auto, Minmax)-->
+  <h3>RAM (Repeat, Auto, Minmax)</h3>
+  <h4>grid-template-columns: repeat(auto-fit, minmax(base, 1fr))</h4>
+
+  <div class="ram">
+    <div class="box greenSection">1</div>
+    <div class="box pinkSection">2</div>
+    <div class="box sectionYellow">3</div>
+    <div class="box purpleSection">4</div>
+  </div>
+</body>
+</html>
+
+
