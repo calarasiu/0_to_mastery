@@ -61,7 +61,7 @@
 
 
   <!--Span Grid-->
-  <h3>Span grid</h3>
+  <h3 style="margin-top: 50px;">Span grid</h3>
   <h4>grid-template-columns: repeat(12, 1fr)  </h4>
   <p>.span-12 { <hr>
     grid-column: 1 / span 12; <hr>
@@ -75,8 +75,8 @@
 
 
   <!--RAM (Repeat, Auto, Minmax)-->
-  <h3>RAM (Repeat, Auto, Minmax)</h3>
-  <h4>grid-template-columns: repeat(auto-fit, minmax(base, 1fr))</h4>
+  <h3 style="margin-top: 50px;">RAM (Repeat, Auto, Minmax)</h3>
+  <h4>grid-template-columns: repeat(auto-fit/fill, minmax(base, 1fr))</h4>
 
   <div class="ram">
     <div class="box greenSection">1</div>
@@ -84,6 +84,43 @@
     <div class="box sectionYellow">3</div>
     <div class="box purpleSection">4</div>
   </div>
+
+
+  <!--Line-up-->
+  <h3 style="margin-top: 50px;">Line up </h3>
+  <h4>justify-content: space-between</h4>
+  <div class="lineUpParent">
+    <div class="card sectionYellow">
+      <h3>Title - Card 1</h3>
+      <p contenteditable>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto placeat animi dolores asperiores id eligendi ratione cupiditate repellat temporibus, sunt, soluta culpa ipsum consequuntur repudiandae quisquam molestiae et ab ducimus.</p>
+      <div class="innerBox pinkSection"></div>
+    </div>
+
+    <div class="card sectionYellow">
+      <h3>Title - Card 2</h3>
+      <p contenteditable>Iusto placeat animi dolores asperiores id eligendi ratione cupiditate repellat temporibus, sunt, soluta culpa ipsum consequuntur repudiandae quisquam molestiae et ab ducimus.</p>
+      <div class="innerBox blueSection"></div>
+    </div>
+
+    <div class="card sectionYellow">
+      <h3>Title - Card 3</h3>
+      <p contenteditable>Short description</p>
+      <div class="innerBox purpleSection "></div>
+    </div>
+    
+  </div>
+
+  <!--Clamping the stye-->
+  <h3 style="margin-top: 50px;">Clamping the style</h3>
+  <h4>clamp(min n of ch, actual, max n of ch)</h4>
+  <div class="clampingParent">
+    <div class="clampingCard sectionYellow">
+      <h1>Title</h1>
+      <div class="clampingBox blueSection"></div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, fugiat quasi architecto dolore obcaecati corporis, odio, vitae incidunt eaque consectetur dolor magnam omnis repellat. Nesciunt ipsum officia sapiente ut atque.</p>
+    </div>
+  </div>
+
 </body>
 </html>
 

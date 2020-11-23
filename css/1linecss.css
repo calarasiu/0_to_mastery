@@ -1,10 +1,10 @@
-body{
+body {
   padding: 50px;
 }
 
 /* place-items: center */
 
-.parentBlue{
+.parentBlue {
   width: 90vw;
   height: 500px;
   background-color: aqua;
@@ -12,7 +12,7 @@ body{
   place-items: center;
 }
 
-.boxCoral{
+.boxCoral {
   background-color: coral;
   padding: 2px 10px;
   border-radius: 10px;
@@ -20,7 +20,7 @@ body{
 
 /* the deconstructed pancake */
 
-.parentWhite{
+.parentWhite {
   background-color: #ffffff;
   width: 90vw;
   height: 500px;
@@ -29,7 +29,7 @@ body{
   justify-content: center;
 }
 
-.box-green{
+.box-green {
   background-color: #d4f2c4;
   margin: 5px;
   flex: 1 1 150px;/*  Stretching: */
@@ -38,38 +38,40 @@ body{
 
 /* the side bar */
 
-.parendSidebar{
+.parendSidebar {
   display: grid;
   grid-template-columns: minmax(150px, 25%) 1fr;
   height: 75vh;
 }
 
-.sectionYellow{
+.sectionYellow {
   background-color: #fee8b4;
 }
 
-.purpleSection{
+.purpleSection {
   background-color: #dfd3e4;
   padding: 5px;
 
 }
 
-.blueSection{
+.blueSection {
   background-color: #a9e2ea;
   padding: 5px;
 }
 
-.pinkSection{
-  background-color:#f5e0e9;
+.pinkSection {
+  background-color:#f192bb;
+  padding: 5px;
+
 }
 
-.greenSection{
+.greenSection {
   background-color:#d4f2c4;
 }
 
 /* The pancake stack */
 
-.pancakeStack{
+.pancakeStack {
   display: grid;
   grid-template-rows: auto 1fr auto;
   height: 75vh;
@@ -77,34 +79,34 @@ body{
 
 
 /* Classic holly grail Layout */
-.holyGrail{
+.holyGrail {
   height: 75vh;
   display: grid;
                       /* columns/rows */
   grid-template: auto 1fr auto / auto 1fr auto;
 }
 
-.header{
+.header {
   padding: 2rem;
   /* from 1 till 4 */
   grid-column: 1/4;
 }
-.mainLeft{
+.mainLeft {
   /* from 1 till 2 */
   grid-column: 1/2;
 }
 
-.main{
+.main {
   /* from 2 till 3 */
   grid-column: 2/3;
 }
 
-.mainRight{
+.mainRight {
   /* from 3 till 4 */
   grid-column: 3/4;
 }
 
-.footer{
+.footer {
   padding: 2rem;
   /* from 1 till 4 */
   grid-column: 1/4;
@@ -112,7 +114,7 @@ body{
 
 /* Span Grid */
 
-.spanGrid{
+.spanGrid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   height: 75vh;
@@ -125,19 +127,19 @@ body{
   text-align: center
 }
 
-.span-12{
+.span-12 {
   grid-column: 1/span 12;
 }
 
-.span-6{
+.span-6 {
   grid-column: 1/span 6;
 }
 
-.span-4{
+.span-4 {
   grid-column: 4/span 4;
 }
 
-.span-2{
+.span-2 {
   grid-column: 3/ span 2;
 }
 
@@ -155,4 +157,53 @@ height:150px;
 display: grid;
 place-items: center;
 text-align: center;
+}
+
+
+/* Line-up */
+.lineUpParent {
+  height: auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.innerBox {
+  height: 100px;
+  width: 100%;
+  padding: 0%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+
+/* Clamping the style */
+
+.clampingParent {
+  height: 75vh;
+  width: 75vw;
+  display: grid;
+  place-items: center;
+}
+
+.clampingCard {
+  width: clamp(23ch, 50%, 46ch );
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.clampingBox {
+  height: 125px;
+  width: 100%;
+  padding: 0;
 }
